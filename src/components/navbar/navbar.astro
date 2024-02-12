@@ -39,13 +39,15 @@ const menuitems = [
 ];
 ---
 
-<Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+<Container class="sticky top-0 z-10">
+  <header
+    class="flex flex-col lg:flex-row justify-between items-center py-4 bg-white">
     <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between">
+      <div class="flex w-full lg:w-auto items-center justify-between bg-white">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
+          ><span class="font-bold text-red-600">S.T.D.</span><span
+            class="text-slate-500">
+            Reggiani</span
           >
         </a>
         <div class="block lg:hidden">
@@ -90,10 +92,10 @@ const menuitems = [
       </MenuItems>
     </Astronav>
     <div>
-      <div class="hidden lg:flex items-center gap-4">
+      <!-- <div class="hidden lg:flex items-center gap-4">
         <a href="#">Log in</a>
         <Link href="#" size="md">Sign up</Link>
-      </div>
+      </div> -->
     </div>
   </header>
 </Container>
