@@ -1,0 +1,20 @@
+---
+import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
+import Research from "@components/research";
+import Hero from "@components/hero";
+import Logos from "@components/logos.astro";
+import Layout from "@layouts/Layout.astro";
+
+import { getLangFromUrl } from "@i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Layout title="">
+  <Container>
+    <Hero client:load lang={lang} />
+
+    <Research client:load lang={lang} />
+    <Logos />
+  </Container>
+</Layout>

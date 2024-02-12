@@ -1,0 +1,123 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Carousel } from "@components/ui/carousel";
+import hong_1 from "assets/reggiani/hong_1.jpg";
+import hong_2 from "assets/reggiani/hong_2.jpg";
+import hong_3 from "assets/reggiani/hong_3.jpg";
+import grono_1 from "assets/reggiani/grono_1.jpg";
+import grono_2 from "assets/reggiani/grono_2.jpg";
+import grono_3 from "assets/reggiani/grono_3.jpg";
+import grono_4 from "assets/reggiani/grono_4.jpg";
+import grono_5 from "assets/reggiani/grono_5.jpg";
+---
+
+<style is:global>
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+</style>
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Le nostre sedi</Fragment>
+      <Fragment slot="desc">
+        Dal momento della fondazione del nostro Business ad oggi, siamo
+        cresciuti notevolmente, ed il nostro team di professionisti qualificati
+        si estende dalla Svizzera, in due diverse sedi, fino a Hong Kong.
+      </Fragment>
+    </Sectionhead>
+
+    <!--  Horizontal separator -->
+    <div class="w-full h-px bg-slate-300 my-8 shadow-2xl"></div>
+    <!-- CHINA -->
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">CINA</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Heshan S.T.D Garment.ltd <br />
+        Chikan district 3, Shaping Town, <br />
+        529700 <br />
+        Heshan, Guangdong, China
+      </p>
+    </div>
+
+    <!-- A video in a video tag -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-8">
+      <video
+        class="w-full rounded-lg aspect-video"
+        controls
+        autoplay
+        muted
+        loop
+        poster="/img/production-site.jpg">
+        <source src="/video/bonding_laser.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="w-full h-px bg-slate-300 my-8 shadow-2xl"></div>
+    <!-- HONG KONG -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">HONG KONG</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Reggiani STD H Kong LTD <br />
+        Room 12, 15/ F Kwong Sang Hong Centre, <br />
+        151-153 Hoi Bun Road, Kwun Tong <br />
+        Kowloon - HONG KONG
+      </p>
+    </div>
+
+    <!-- A video in a video tag -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-8">
+      <Carousel client:load photos={[hong_1.src, hong_2.src, hong_3.src]} />
+    </div>
+    <div class="w-full h-px bg-slate-300 my-8 shadow-2xl"></div>
+    <!-- BESAZIO -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">BESAZIO</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Still Very Reggiani SA <br />
+        Via Besazio 21 <br />
+        6863 Besazio
+      </p>
+    </div>
+
+    <!-- A video in a video tag -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-8">
+      <Carousel client:load photos={[hong_1.src, hong_2.src, hong_3.src]} />
+    </div>
+
+    <div class="w-full h-px bg-slate-300 my-8 shadow-2xl"></div>
+    <!-- GRONO -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">GRONO</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Reggiani STD SA <br />
+        Piazza Nuova 9° <br />
+        6537 Grono
+      </p>
+    </div>
+
+    <!-- A video in a video tag -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-8">
+      <Carousel
+        client:load
+        photos={[
+          grono_1.src,
+          grono_2.src,
+          grono_3.src,
+          grono_4.src,
+          grono_5.src,
+        ]}
+      />
+    </div>
+  </Container>
+</Layout>

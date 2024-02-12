@@ -1,57 +1,66 @@
 ---
-import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
 ---
 
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Chi siamo</Fragment>
+      <Fragment slot="desc">Styling - Technology - Desing</Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-12">
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        La nostra storia parte dal 1983, quando la STD Reggiani, acronimo che
+        significa Styling, Technology e Design, iniziò ad operare disegnando e
+        seguendo le produzioni di abbigliamento per grandi marchi
+        internazionali. Gianfranco Reggiani, il fondatore, si è sempre e da
+        subito distinto per le sue straordinarie doti non solo di imprenditore,
+        ma di designer e conoscitore del prodotto, collaborando con molti marchi
+        internazionali.
       </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
+      <div class="space-y-3">
+        <p class="text-lg leading-relaxed text-slate-500">
+          Siamo presenti in Cina dal 2004, inizialmente con una joint venture, e
+          in un secondo momento e da oramai quasi 19 anni una azienda situata in
+          Cina interamente sotto nostra cura, con possibilità completa di creare
+          uno spazio innovativo, capace di portare i nostri servizi e le nostre
+          tecnologie a livello internazionale, quindi:
+        </p>
+        <ol
+          class="list-decimal list-inside text-lg leading-relaxed text-slate-500">
+          <li>
+            Scelta di operare in un’azienda 100% influenzabile dalle nostre idee
+          </li>
+          <li>
+            Formazione di tecnici e manager in loco esperti in:
+            <ol class="list-[upper-roman] list-inside ml-6">
+              <li>
+                <span class="font-bold">Standard qualitativi elevati</span>, con
+                introduzione del concetto del “total quality system” e del
+                design tecnico come lettura dei contenuti del prodotto.
+              </li>
+              <li>
+                Introduzione del <span class="font-bold"
+                  >controllo giornaliero dell’operatività</span
+                > di ogni settore: dall’input alla produzione, al controllo, il packing
+                e le consegne.
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+      <p class="text-lg leading-relaxed text-slate-500">
+        La crescita globale avvenuta in numerosi anni di lavoro, ci ha permesso
+        di crescere globalmente, accumulando un bagaglio di conoscenze e
+        Know-How considerevole, in grado di risolvere problematiche e scegliere
+        strategici modi di operare internazionalmente dal design alla
+        produzione.
+      </p>
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
+      <!-- A video in a video tag -->
     </div>
   </Container>
 </Layout>

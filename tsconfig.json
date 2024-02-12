@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "/Users/lolelu/Documents/GitHub/reggiani_landing/src",
     "strictNullChecks": true,
     "types": ["astro/client"],
     "paths": {
@@ -10,7 +10,10 @@
       "@components/*": ["components/*"],
       "@layouts/*": ["layouts/*"],
       "@assets/*": ["assets/*"],
-      "@pages/*": ["pages/*"]
-    }
-  }
+      "@pages/*": ["pages/*"],
+      "@i18n/*": ["i18n/*"],
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+  },
 }

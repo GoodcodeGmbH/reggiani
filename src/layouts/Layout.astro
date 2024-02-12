@@ -3,6 +3,12 @@ import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
+import LanguagePicker from "@components/languagePicker.astro";
+
+import "@fontsource-variable/playfair";
+// Supports weights 100-900
+import "@fontsource-variable/montserrat";
+import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -17,24 +23,29 @@ const resolvedImageWithDomain = new URL(
 
 const { title } = Astro.props;
 
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
 const makeTitle = title ? title + " | " + "S.T.D. Reggiani" : "S.T.D. Reggiani";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
+    <ViewTransitions />
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="S.T.D. Reggiani - By GoodCode"
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
+        creator: "@lolelu1994",
         site: "@web3templates",
         card: "summary_large_image",
       }}
@@ -42,11 +53,11 @@ const makeTitle = title ? title + " | " + "S.T.D. Reggiani" : "S.T.D. Reggiani";
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `S.T.D. Reggiani`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "S.T.D. Reggiani Homepage Screenshot",
         },
       }}
     />
@@ -54,6 +65,7 @@ const makeTitle = title ? title + " | " + "S.T.D. Reggiani" : "S.T.D. Reggiani";
   <body>
     <Navbar />
     <slot />
+
     <Footer />
     <style is:global>
       /* Improve Page speed */
