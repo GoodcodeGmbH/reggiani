@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { cn } from "utils/cn";
+import { cn } from "@utils/cn";
 import { useTranslations } from "@i18n/utils";
 import { ui, defaultLang } from "@i18n/ui";
 
