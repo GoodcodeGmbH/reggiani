@@ -7,8 +7,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://reggiani.pages.github.io/",
-  base: "/reggiani",
+  site: "https://goodcodegmbh.github.io/reggiani",
+
   output: "static",
 
   integrations: [tailwind(), mdx(), sitemap(), react()],
