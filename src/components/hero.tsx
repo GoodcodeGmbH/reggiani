@@ -1,9 +1,9 @@
 import { ImagesSlider } from "./ui/image-slider";
 import { motion } from "framer-motion";
-import hero1 from "assets/reggiani/Hero1.jpg";
-import hero2 from "assets/reggiani/Hero2.jpg";
-import hero3 from "assets/reggiani/Hero3.jpg";
-import hero4 from "assets/reggiani/Hero4.jpg";
+import hero1 from "@assets/reggiani/Hero1.jpg";
+import hero2 from "@assets/reggiani/Hero2.jpg";
+import hero3 from "@assets/reggiani/Hero3.jpg";
+import hero4 from "@assets/reggiani/Hero4.jpg";
 import { useTranslations } from "@i18n/utils";
 
 const images = [hero1.src, hero2.src, hero3.src, hero4.src];
