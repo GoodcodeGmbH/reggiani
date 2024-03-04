@@ -10,6 +10,7 @@ export default defineConfig({
   site: "https://reggiani.pages.github.io/",
   base: "/reggiani",
   output: "static",
+
   integrations: [tailwind(), mdx(), sitemap(), react()],
   i18n: {
     locales: ["it", "de", "en", "fr"],
@@ -21,6 +22,27 @@ export default defineConfig({
   vite: {
     ssr: {
       noExternal: ["svgo"],
+    },
+    resolve: {
+      alias: {
+        // "paths": {
+        //   "@lib/*": ["lib/*"],
+        //   "@utils/*": ["utils/*"],
+        //   "@components/*": ["components/*"],
+        //   "@layouts/*": ["layouts/*"],
+        //   "@assets/*": ["assets/*"],
+        //   "@pages/*": ["pages/*"],
+        //   "@i18n/*": ["i18n/*"],
+        // },
+
+        "@lib": "/src/lib",
+        "@utils": "/src/utils",
+        "@components": "/src/components",
+        "@layouts": "/src/layouts",
+        "@assets": "/src/assets",
+        "@pages": "/src/pages",
+        "@i18n": "/src/i18n",
+      },
     },
   },
 });
