@@ -7,34 +7,20 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://goodcodegmbh.github.io/reggiani",
+  site: "https://goodcodegmbh.github.io",
+  base: "/reggiani",
+  trailingSlash: "ignore",
 
   output: "static",
 
   integrations: [tailwind(), mdx(), sitemap(), react()],
-  i18n: {
-    locales: ["it", "de", "en", "fr"],
-    defaultLocale: "it",
-    routing: {
-      prefixDefaultLocale: false,
-    },
-  },
+
   vite: {
-    ssr: {
-      noExternal: ["svgo"],
-    },
+    // ssr: {
+    //   noExternal: ["svgo"],
+    // },
     resolve: {
       alias: {
-        // "paths": {
-        //   "@lib/*": ["lib/*"],
-        //   "@utils/*": ["utils/*"],
-        //   "@components/*": ["components/*"],
-        //   "@layouts/*": ["layouts/*"],
-        //   "@assets/*": ["assets/*"],
-        //   "@pages/*": ["pages/*"],
-        //   "@i18n/*": ["i18n/*"],
-        // },
-
         "@lib": "/src/lib",
         "@utils": "/src/utils",
         "@components": "/src/components",
