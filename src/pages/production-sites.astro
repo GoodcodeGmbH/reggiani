@@ -11,6 +11,10 @@ import grono_2 from "@assets/reggiani/grono_2.jpg";
 import grono_3 from "@assets/reggiani/grono_3.jpg";
 import grono_4 from "@assets/reggiani/grono_4.jpg";
 import grono_5 from "@assets/reggiani/grono_5.jpg";
+import { getLangFromUrl, useTranslatedPath } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <style is:global>
@@ -58,8 +62,11 @@ import grono_5 from "@assets/reggiani/grono_5.jpg";
         autoplay
         muted
         loop
-        poster="/img/production-site.jpg">
-        <source src="/video/bonding_laser.mp4" type="video/mp4" />
+        poster={translatePath("/img/production-site.jpg")}>
+        <source
+          src={translatePath("/video/bonding_laser.mp4")}
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
     </div>
