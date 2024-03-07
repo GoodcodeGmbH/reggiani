@@ -2,6 +2,7 @@ import { ImagesSlider } from "./ui/image-slider";
 import { motion } from "framer-motion";
 import research_1 from "@assets/reggiani/Research_1.jpg";
 import { useTranslations, useTranslatedPath } from "@i18n/utils";
+const url = import.meta.env.BASE_URL;
 
 function wrapCaps(text) {
   const elements: React.ReactNode[] = [];
@@ -33,10 +34,7 @@ const Hero = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover object-center z-0"
         poster={research_1.src}>
-        <source
-          src={translatePath("/video/bonding_laser.mp4")}
-          type="video/mp4"
-        />
+        <source src={url + "/video/bonding_laser.mp4"} type="video/mp4" />
       </video>
       <motion.div
         initial={{

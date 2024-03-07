@@ -11,6 +11,14 @@ import grono_2 from "@assets/reggiani/grono_2.jpg";
 import grono_3 from "@assets/reggiani/grono_3.jpg";
 import grono_4 from "@assets/reggiani/grono_4.jpg";
 import grono_5 from "@assets/reggiani/grono_5.jpg";
+import heshan_0 from "@assets/reggiani/sites/Heshan_0.jpg";
+import heshan_1 from "@assets/reggiani/sites/Heshan_1.jpg";
+import heshan_2 from "@assets/reggiani/sites/Heshan_2.jpg";
+import heshan_3 from "@assets/reggiani/sites/Heshan_3.jpg";
+import heshan_4 from "@assets/reggiani/sites/Heshan_4.jpg";
+import heshan_5 from "@assets/reggiani/sites/Heshan_5.jpg";
+import heshan_6 from "@assets/reggiani/sites/Heshan_6.jpg";
+import heshan_7 from "@assets/reggiani/sites/Heshan_7.jpg";
 import { getLangFromUrl, useTranslatedPath } from "@i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -47,8 +55,8 @@ const translatePath = useTranslatedPath(lang);
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">CINA</h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        Heshan S.T.D Garment.ltd <br />
-        Chikan district 3, Shaping Town, <br />
+        Heshan S.T.D Garment Manufactoring CO LTD <br />
+        Chikan Industrial Zone Shaping Town, <br />
         529700 <br />
         Heshan, Guangdong, China
       </p>
@@ -56,20 +64,21 @@ const translatePath = useTranslatedPath(lang);
 
     <!-- A video in a video tag -->
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-8">
-      <video
-        class="w-full rounded-lg aspect-video"
-        controls
-        autoplay
-        muted
-        loop
-        poster={translatePath("/img/production-site.jpg")}>
-        <source
-          src={translatePath("/video/bonding_laser.mp4")}
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
+      <Carousel
+        client:load
+        photos={[
+          heshan_0.src,
+          heshan_1.src,
+          heshan_2.src,
+          heshan_3.src,
+          heshan_4.src,
+          heshan_5.src,
+          heshan_6.src,
+          heshan_7.src,
+        ]}
+      />
     </div>
+
     <div class="w-full h-px bg-slate-300 my-8 shadow-2xl"></div>
     <!-- HONG KONG -->
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
