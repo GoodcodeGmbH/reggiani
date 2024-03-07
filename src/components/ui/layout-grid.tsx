@@ -29,12 +29,15 @@ export const LayoutGrid = ({
   };
 
   const handleOutsideClick = () => {
+    if (!selected) return;
     setLastSelected(selected);
     setSelected(null);
   };
 
   return (
-    <div className="w-full md:h-screen p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative grid-rows-6 md:grid-rows-none ">
+    <div
+      className="w-full md:h-screen py-10 grid grid-cols-1 md:grid-cols-3  max-w-screen-4xl mx-auto gap-4 relative grid-rows-6 md:grid-rows-none "
+      onClick={handleOutsideClick}>
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -43,7 +46,7 @@ export const LayoutGrid = ({
               card.className,
               "relative overflow-hidden cursor-pointer ",
               selected?.id === card.id
-                ? " absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                ? " absolute inset-0 h-1/2 md:h-[80%] w-full md:w-[90%]  m-auto z-50 flex justify-center items-center flex-wrap flex-col"
                 : lastSelected?.id === card.id
                   ? "z-40 bg-white  h-full w-full"
                   : "bg-white  h-full w-full",
@@ -107,9 +110,9 @@ const SelectedCard = ({
           opacity: 0,
         }}
         animate={{
-          opacity: 0.6,
+          opacity: 0.1,
         }}
-        className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
+        className="absolute inset-0 h-full w-full bg-black  z-10"
       />
       <motion.div
         initial={{
@@ -124,8 +127,10 @@ const SelectedCard = ({
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative px-8 pb-4 z-[70]">
-        {selected && <selected.content lang={lang} />}
+        className="relative z-[70]">
+        <div className="flex justify-between items-center bg-black bg-opacity-40 px-8 pb-4 pt-8">
+          {selected && <selected.content lang={lang} />}
+        </div>
       </motion.div>
     </div>
   );

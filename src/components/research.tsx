@@ -7,6 +7,11 @@ import feature_4 from "@assets/reggiani/Feature_4.jpg";
 import feature_5 from "@assets/reggiani/Feature_5.jpg";
 import research_1 from "@assets/reggiani/Research_1.jpg";
 
+import campionario from "@assets/reggiani/home/Campionario.jpg";
+import modellistica from "@assets/reggiani/home/Modellistica.jpg";
+import prototipia from "@assets/reggiani/home/Prototipia.jpg";
+import ricerca from "@assets/reggiani/home/Ricerca.jpg";
+
 import { useTranslations } from "@i18n/utils";
 import { LayoutGrid, type Card } from "./ui/layout-grid";
 
@@ -94,7 +99,7 @@ const cards = [
     title: "research.one.title",
 
     className: "md:col-span-2 min-h-32 sm:min-h-64",
-    thumbnail: feature_2.src,
+    thumbnail: campionario.src,
   },
   {
     id: 2,
@@ -102,7 +107,7 @@ const cards = [
     title: "research.two.title",
 
     className: "col-span-1 row-span-2 md:row-span-1",
-    thumbnail: feature_1.src,
+    thumbnail: prototipia.src,
   },
   {
     id: 3,
@@ -110,7 +115,7 @@ const cards = [
     title: "research.three.title",
 
     className: "col-span-1 row-span-2 md:row-span-1",
-    thumbnail: research_1.src,
+    thumbnail: modellistica.src,
   },
   {
     id: 4,
@@ -118,6 +123,6 @@ const cards = [
     title: "research.four.title",
 
     className: "md:col-span-2 min-h-32",
-    thumbnail: feature_4.src,
+    thumbnail: ricerca.src,
   },
 ] as Card[];

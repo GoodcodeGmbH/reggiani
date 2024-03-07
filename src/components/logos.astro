@@ -1,26 +1,36 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
+import GOTS from "@assets/reggiani/home/GOTS.png";
+import GRS from "@assets/reggiani/home/GRS.png";
+import OEKO from "@assets/reggiani/home/oeko-tex.png";
+import RDS from "@assets/reggiani/home/RDS.png";
+import { Image } from "astro:assets";
 ---
 
 <div class="bg-white py-12 sm:py-16 lg:px-8">
   <div class="mx-auto max-w-2xl text-center">
-    <p class="text-base font-semibold leading-7 text-red-600">Lorem Ipsum</p>
+    <p class="text-base font-semibold leading-7 text-red-600">Qualità</p>
     <h2
       class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl font-serif">
-      I nostri partner
+      I nostri certificati
     </h2>
     <p class="mt-6 text-lg leading-8 text-gray-600">
       Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
       cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
     </p>
   </div>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-16 flex-wrap">
-    <Icon class="h-8 md:h-12" name="simple-icons:react" />
-    <Icon class="h-8 md:h-12" name="simple-icons:svelte" />
+  <div
+    class="flex gap-8 md:gap-20 items-center justify-center mt-16 flex-wrap filter grayscale">
+    <!-- <Icon class="h-8 md:h-12" name="simple-icons:svelte" />
     <Icon class="h-8 md:h-14" name="simple-icons:tailwindcss" />
     <Icon class="h-8 md:h-16" name="simple-icons:alpinedotjs" />
     <Icon class="h-8 md:h-12" name="simple-icons:vercel" />
-    <Icon class="h-8 md:h-12" name="simple-icons:astro" />
+    <Icon class="h-8 md:h-12" name="simple-icons:astro" /> -->
+
+    <Image src={GOTS} alt="GOTS" class={"h-16 md:h-24 w-auto"} />
+    <Image src={GRS} alt="GRS" class={"h-16 md:h-24 w-auto"} />
+    <Image src={OEKO} alt="OEKO" class={"h-16 md:h-24 w-auto"} />
+    <Image src={RDS} alt="RDS" class={"h-16 md:h-24 w-auto"} />
   </div>
 </div>
