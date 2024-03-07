@@ -1,6 +1,6 @@
 import { ImagesSlider } from "./ui/image-slider";
 import { motion } from "framer-motion";
-
+import research_1 from "@assets/reggiani/Research_1.jpg";
 import { useTranslations, useTranslatedPath } from "@i18n/utils";
 
 function wrapCaps(text) {
@@ -31,7 +31,8 @@ const Hero = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover object-center z-0">
+        className="absolute inset-0 w-full h-full object-cover object-center z-0"
+        poster={research_1.src}>
         <source
           src={translatePath("/video/bonding_laser.mp4")}
           type="video/mp4"
