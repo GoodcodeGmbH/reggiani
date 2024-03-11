@@ -4,13 +4,26 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 ---
 
 <Layout title="Contact">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Contatti</Fragment>
-      <Fragment slot="desc">Siamo qui per voi.</Fragment>
+      <Fragment slot="title">
+        {t("contact.title")}
+      </Fragment>
+      <Fragment slot="desc">
+        {t("contact.description")}
+      </Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
@@ -21,8 +34,7 @@ import { Icon } from "astro-icon";
           >
         </h2>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          Hai qualcosa da dire? Siamo qui per aiutarti. Compila il form o
-          chiamaci.
+          {t("contact.text")}
         </p>
         <div class="mt-5">
           <div class="flex items-center mt-2 space-x-2 text-gray-600">

@@ -23,5 +23,12 @@
   "nav.about": "Chi siamo",
   "nav.our-sites": "Le nostre sedi",
   "nav.contact": "Contatti",
-  "nav.language": "Lingua"
+  "nav.language": "Lingua",
+
+  "sites.title": "Le nostre sedi",
+  "sites.description": "Dal momento della fondazione del nostro Business ad oggi, siamo cresciuti notevolmente, ed il nostro team di professionisti qualificati si estende dalla Svizzera, in due diverse sedi, fino a Hong Kong.",
+
+  "contact.title": "Contatti",
+  "contact.description": "Siamo qui per voi.",
+  "contact.text": "Contattateci per qualsiasi informazione, saremo lieti di rispondervi."
 }

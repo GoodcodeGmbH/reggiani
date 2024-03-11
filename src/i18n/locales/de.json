@@ -20,9 +20,16 @@
   "research.four.title": "Forschung und Entwicklung",
   "research.four.content": " Unser Team widmet sich der Suche nach leistungsstarken und hochwertigen Stoffen und Accessoires, um einzigartige und innovative Kleidungsstücke zu entwickeln. Das Studium und die Erforschung neuer Materialien, seien es Fasern, Stoffe oder Zubehör, sind von grundlegender Bedeutung, um innovative, leistungsstarke und nachhaltige Vorschläge anbieten zu können, die dem Endverbraucher maximale Sicherheit bieten.",
 
+  "sites.title": "Unsere Standorte",
+  "sites.description": "Seit der Gründung unseres Unternehmens sind wir stark gewachsen und unser Team von qualifizierten Fachleuten erstreckt sich von der Schweiz, mit zwei verschiedenen Standorten, bis nach Hongkong.",
+
   "nav.home": "Startseite",
   "nav.about": "Über uns",
   "nav.our-sites": "Unsere Standorte",
   "nav.contact": "Kontakt",
-  "nav.language": "Sprache"
+  "nav.language": "Sprache",
+
+  "contact.title": "Kontakt",
+  "contact.description": "Wir sind für Sie da.",
+  "contact.text": "Kontaktieren Sie uns für weitere Informationen, wir freuen uns, Ihnen zu antworten."
 }
