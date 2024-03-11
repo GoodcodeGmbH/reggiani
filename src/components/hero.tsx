@@ -34,7 +34,7 @@ const Hero = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover object-center z-0"
         poster={research_1.src}>
-        <source src={url + "/video/bonding_laser.mp4"} type="video/mp4" />
+        <source src={url + "/video/home.mp4"} type="video/mp4" />
       </video>
       <motion.div
         initial={{
