@@ -1,5 +1,5 @@
 {
-  "hero.title": "Styling, Technology and Design",
+  "hero.title": "Styling - Technology - Design",
 
   "hero.subtitle": "Hersteller von Kleidung für die besten internationalen Marken.",
   "hero.cta": "Kontaktiere uns",
@@ -28,6 +28,8 @@
   "nav.our-sites": "Unsere Standorte",
   "nav.contact": "Kontakt",
   "nav.language": "Sprache",
+
+  "home.certifications.title": "Unsere Zertifizierungen",
 
   "contact.title": "Kontakt",
   "contact.description": "Wir sind für Sie da.",

@@ -2,6 +2,10 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import { Image } from "astro:assets";
+import ChiSiamo from "@assets/reggiani/chi-siamo.jpg";
+import ChiSiamo2 from "@assets/reggiani/chi-siamo-2.jpg";
+
 ---
 
 <Layout title="About">
@@ -11,7 +15,12 @@ import Sectionhead from "@components/sectionhead.astro";
       <Fragment slot="desc"></Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-12">
+    <!-- Image -->
+
+
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-12 px-4">
+
       <p class="text-lg leading-relaxed text-slate-500">
         La nostra storia parte dal 1983, quando la STD Reggiani, acronimo che
         significa Styling, Technology e Design, iniziò ad operare disegnando e
@@ -21,6 +30,9 @@ import Sectionhead from "@components/sectionhead.astro";
         ma di designer e conoscitore del prodotto, collaborando con molti marchi
         internazionali.
       </p>
+      <div class="flex justify-center">
+          <Image  class=" max-w-[720px] w-full h-auto" src={ChiSiamo} alt="Chi siamo" />
+      </div>
       <div class="space-y-3">
         <p class="text-lg leading-relaxed text-slate-500">
           Siamo presenti in Cina dal 2004, inizialmente con una joint venture, e
@@ -29,8 +41,9 @@ import Sectionhead from "@components/sectionhead.astro";
           uno spazio innovativo, capace di portare i nostri servizi e le nostre
           tecnologie a livello internazionale, quindi:
         </p>
+        <div class="flex flex-col gap-4 lg:flex-row justify-between items-center">
         <ol
-          class="list-decimal list-inside text-lg leading-relaxed text-slate-500">
+          class="list-decimal list-inside text-lg leading-relaxed text-slate-500 basis-1/2">
           <li>
             Scelta di operare in un’azienda 100% influenzabile dalle nostre idee
           </li>
@@ -51,6 +64,10 @@ import Sectionhead from "@components/sectionhead.astro";
             </ol>
           </li>
         </ol>
+        <div class="flex justify-center">
+            <Image  class=" max-w-[340px] w-full h-auto" src={ChiSiamo2} alt="Chi siamo" />
+        </div>
+        </div>
       </div>
       <p class="text-lg leading-relaxed text-slate-500">
         La crescita globale avvenuta in numerosi anni di lavoro, ci ha permesso
