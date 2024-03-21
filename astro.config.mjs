@@ -16,9 +16,6 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap(), react()],
 
   vite: {
-    // ssr: {
-    //   noExternal: ["svgo"],
-    // },
     resolve: {
       alias: {
         "@lib": "/src/lib",

@@ -1,6 +1,5 @@
-import { ImagesSlider } from "./ui/image-slider";
 import { motion } from "framer-motion";
-import research_1 from "@assets/reggiani/Research_1.jpg";
+
 import { useTranslations, useTranslatedPath } from "@i18n/utils";
 const url = import.meta.env.BASE_URL;
 
@@ -32,8 +31,7 @@ const Hero = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover object-center z-0"
-        poster={research_1.src}>
+        className="absolute inset-0 w-full h-full object-cover object-center z-0">
         <source src={url + "/video/home.mp4"} type="video/mp4" />
       </video>
       <motion.div
@@ -49,7 +47,7 @@ const Hero = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
           duration: 0.6,
         }}
         className="z-50 flex flex-col justify-center items-center bg-black p-8 bg-opacity-50">
-        <motion.p className="font-bold text-6xl md:text-6xl text-center font-serif bg-clip-text text-transparent bg-white py-4">
+        <motion.p className="font-bold text-6xl md:text-6xl text-center font-serif  text-white py-4">
           {wrapCaps(t("hero.title"))}
         </motion.p>
 

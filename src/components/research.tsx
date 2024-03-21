@@ -1,12 +1,3 @@
-import heroImage from "@assets/hero.png";
-
-import feature_1 from "@assets/reggiani/Feature_1.jpg";
-import feature_2 from "@assets/reggiani/Feature_2.jpg";
-import feature_3 from "@assets/reggiani/Feature_3.jpg";
-import feature_4 from "@assets/reggiani/Feature_4.jpg";
-import feature_5 from "@assets/reggiani/Feature_5.jpg";
-import research_1 from "@assets/reggiani/Research_1.jpg";
-
 import campionario from "@assets/reggiani/home/Campionario.jpg";
 import modellistica from "@assets/reggiani/home/Modellistica.jpg";
 import prototipia from "@assets/reggiani/home/Prototipia.jpg";
