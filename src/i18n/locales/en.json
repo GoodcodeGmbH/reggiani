@@ -1,8 +1,50 @@
 {
-  "hero.title": "Styling, Technology and Design",
-  "hero.cta": "Contact us",
-
   "nav.home": "Home",
-  "nav.about": "About",
-  "nav.twitter": "Twitter"
+  "nav.about": "About Us",
+  "nav.our-sites": "Our locations",
+  "nav.contact": "Contacts",
+  "nav.language": "Language",
+
+  "hero.title": "Styling - Technology - Design",
+  "hero.subtitle": "Manufacturers of clothing for the best international brands.",
+  "hero.cta": "Contact Us",
+
+  "research.subtitle": "Cutting-edge",
+  "research.title": "Our technologies ",
+  "research.description": "Since the beginning of our business, we have invested in cutting-edge technologies and in the development of latest generation machinery, which allow us to produce efficiently while guaranteeing the highest quality. In addition to lines of staplers, we are leaders in more modern and refined technologies such as taping and welding, and the very advanced application of the bonding technology. We have created a team of specialized technicians, and we apply these processes in the production of clothing and bags/backpacks/accessories.",
+
+  "research.one.title": "Samples and Production ",
+  "research.one.content": "Equipped with both a sample room for small productions and lines for orders of larger quantities, we adapt with flexibility and dynamism to the production needs of our customers, checking each material and using our quality control laboratory equipped with all the necessary tools to verify the performance of each component and therefore offering a quality control service at every step of the production chain.",
+
+  "research.two.title": "Prototype ",
+  "research.two.content": "The development of a prototype allows to verify the look of the garment and its fit, ensuring the quality of the definitive final product. Our team verifies every possibility of improving performances and the production timetable, always striving for reaching the best quality.",
+
+  "research.three.title": "Fitting and paper patterns",
+  "research.three.content": "Our team has 50 years of experience in creating paper patterns starting from drawings and technical data sheets, and we have long since added an advanced and ever-evolving computerized CAD system, which can be developed in 3D. Experience and research allow us to study fit and placement, perfecting both before cutting the fabric.",
+
+  "research.four.title": "Sourcing and development",
+  "research.four.content": " We provide our customers with a dedicated team, focused on sourcing high performing and high-quality fabrics and accessories to develop unique garments. The study and research of new materials, be they fibers, fabrics or accessories, it’s essential to offer cutting-edge, high-performance, sustainable proposals that provide maximum safety to end users.",
+
+  "home.certifications.title": "Our certifications",
+
+  "about.title": "About us",
+  "about.top-fragment": "Our story begins in 1983, when STD Reggiani, an acronym that stands for Styling, Technology and Design, began operations designing and overseeing clothing productions for major international brands. Gianfranco Reggiani, the founder, has always and swiftly distinguished himself for his extraordinary skills not only as an entrepreneur but as a designer and product connoisseur, working with many international brands.",
+  "about.mid-fragment": "We have been present in China since 2004, initially with a joint venture, and later, now for almost 19 years, with a company located in China entirely under our care, with complete possibility to create an innovative space, capable of bringing our services and technologies to an international level, thus:",
+  "about.bot-fragment": "The worldwide growth that has occurred over the years has enabled us to grow globally, acquiring considerable knowledge and Know-How on problem solving strategies as we choose strategic ways of operating internationally from design to the production chain.",
+  "about.list-1": "Choosing to operate in a company 100% influenced by our ideas;",
+  "about.list-2": "Training on-site technicians and managers experienced in quality and organization;",
+  "about.list-3": "<span class='font-bold'>High quality standards</span>, with introduction of the concept of 'total quality system' and technical design as a reading of product contents.",
+  "about.list-4": "Introduction of <span class='font-bold'>daily monitoring </span> of the operation of each sector: from input to production, inspection, packing and deliveries.",
+
+  "sites.title": "Our locations",
+  "sites.description": "From the establishment of our Business to today, we have grown considerably, and our team of qualified professionals extends from Switzerland, in two different locations, to Hong Kong.",
+
+  "contact.title": "Contacts",
+  "contact.description": "Here to assist you.",
+  "contact.subtitle": "Contact Reggiani <span class='font-bold text-reggianiRed'>S.T.D.</span>",
+  "contact.text": "Contact us for any information, we will be happy to respond.",
+  "contact.send": "Send message",
+  "contact.fullName": "Full Name",
+  "contact.emailAddress": "Email address",
+  "contact.yourMessage": "Your message"
 }

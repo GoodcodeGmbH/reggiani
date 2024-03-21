@@ -1,0 +1,75 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Image } from "astro:assets";
+import ChiSiamo from "@assets/reggiani/chi-siamo.jpg";
+import ChiSiamo2 from "@assets/reggiani/chi-siamo-2.jpg";
+
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">{t("about.title")}</Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
+
+    <!-- Image -->
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-12 px-4">
+      <p class="text-lg leading-relaxed text-slate-500">
+        {t("about.top-fragment")}
+      </p>
+      <div class="flex justify-center">
+        <Image
+          class="max-w-[720px] w-full h-auto"
+          src={ChiSiamo}
+          alt="Chi siamo"
+        />
+      </div>
+      <div class="space-y-3">
+        <p class="text-lg leading-relaxed text-slate-500">
+          {t("about.mid-fragment")}
+        </p>
+        <div
+          class="flex flex-col gap-4 lg:flex-row justify-between items-center">
+          <ol
+            class="list-decimal list-inside text-lg leading-relaxed text-slate-500 basis-1/2">
+            <li>
+              {t("about.list-1")}
+            </li>
+            <li>
+              {t("about.list-2")}
+              <ol class="list-[upper-roman] list-inside ml-6">
+                <li set:html={t("about.list-3")} />
+                <li set:html={t("about.list-4")} />
+              </ol>
+            </li>
+          </ol>
+          <div class="flex justify-center">
+            <Image
+              class="max-w-[340px] w-full h-auto"
+              src={ChiSiamo2}
+              alt="Chi siamo"
+            />
+          </div>
+        </div>
+      </div>
+      <p class="text-lg leading-relaxed text-slate-500">
+        {t("about.bot-fragment")}
+      </p>
+
+      <!-- A video in a video tag -->
+    </div>
+  </Container>
+</Layout>

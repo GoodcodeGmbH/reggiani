@@ -1,0 +1,146 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Carousel } from "@components/ui/carousel";
+import hong_1 from "@assets/reggiani/hong_1.jpg";
+import hong_2 from "@assets/reggiani/hong_2.jpg";
+import hong_3 from "@assets/reggiani/hong_3.jpg";
+import grono_1 from "@assets/reggiani/grono_1.jpg";
+import grono_2 from "@assets/reggiani/grono_2.jpg";
+import grono_3 from "@assets/reggiani/grono_3.jpg";
+import grono_4 from "@assets/reggiani/grono_4.jpg";
+import grono_5 from "@assets/reggiani/grono_5.jpg";
+import grono_6 from "@assets/reggiani/Research_1.jpg";
+import besazio_0 from "@assets/reggiani/sites/Besazio_0.jpg";
+import besazio_1 from "@assets/reggiani/sites/Besazio_1.jpg";
+import heshan_0 from "@assets/reggiani/sites/Heshan_0.jpg";
+
+import heshan_4 from "@assets/reggiani/sites/Heshan_4.jpg";
+import heshan_5 from "@assets/reggiani/sites/Heshan_5.jpg";
+import heshan_6 from "@assets/reggiani/sites/Heshan_6.jpg";
+import heshan_7 from "@assets/reggiani/sites/Heshan_7.jpg";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
+---
+
+<style is:global>
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+</style>
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">{t("sites.title")}</Fragment>
+      <Fragment slot="desc">
+        {t("sites.description")}
+      </Fragment>
+    </Sectionhead>
+
+    <!--  Horizontal separator -->
+    <div class="w-full h-px bg-slate-300 my-8 shadow-2xl"></div>
+    <!-- CHINA -->
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">CINA</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Heshan S.T.D Garment Manufactoring CO LTD <br />
+        Chikan Industrial Zone Shaping Town, <br />
+        529700 <br />
+        Heshan, Guangdong, China
+      </p>
+    </div>
+
+    <!-- A video in a video tag -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-8">
+      <Carousel
+        client:load
+        photos={[
+          heshan_0.src,
+          // heshan_1.src,
+          // heshan_2.src,
+          // heshan_3.src,
+          heshan_4.src,
+          heshan_5.src,
+          heshan_6.src,
+          heshan_7.src,
+        ]}
+      />
+    </div>
+
+    <div class="w-full h-px bg-slate-300 my-8 shadow-2xl"></div>
+    <!-- HONG KONG -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">HONG KONG</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Reggiani STD H Kong LTD <br />
+        Room 12, 15/ F Kwong Sang Hong Centre, <br />
+        151-153 Hoi Bun Road, Kwun Tong <br />
+        Kowloon - HONG KONG
+      </p>
+    </div>
+
+    <!-- A video in a video tag -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-8">
+      <Carousel client:load photos={[hong_1.src, hong_2.src, hong_3.src]} />
+    </div>
+    <div class="w-full h-px bg-slate-300 my-8 shadow-2xl"></div>
+    <!-- BESAZIO -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">SVIZZERA - CANTON TICINO</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Still Very Reggiani SA <br />
+        Via Besazio 21 <br />
+        6863 Besazio
+      </p>
+    </div>
+
+    <!-- A video in a video tag -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-8">
+      <Carousel client:load photos={[besazio_0.src, besazio_1.src]} />
+    </div>
+
+    <div class="w-full h-px bg-slate-300 my-8 shadow-2xl"></div>
+    <!-- GRONO -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        SVIZZERA - CANTON GRIGIONI
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Reggiani STD SA <br />
+        Piazza Nuova 9a <br />
+        6537 Grono
+      </p>
+    </div>
+
+    <!-- A video in a video tag -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-8">
+      <Carousel
+        client:load
+        photos={[
+          grono_6.src,
+          grono_1.src,
+          grono_2.src,
+          // grono_3.src,
+          grono_4.src,
+          grono_5.src,
+        ]}
+      />
+    </div>
+  </Container>
+</Layout>
