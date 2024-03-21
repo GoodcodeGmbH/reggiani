@@ -13,7 +13,14 @@ export default defineConfig({
 
   output: "static",
 
-  integrations: [tailwind(), mdx(), sitemap(), react()],
+  integrations: [
+    tailwind(),
+    mdx(),
+    sitemap(),
+    react({
+      experimentalReactChildren: true,
+    }),
+  ],
 
   vite: {
     resolve: {

@@ -6,7 +6,14 @@ import Hero from "@components/hero";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 
+import campionario from "@assets/reggiani/home/Campionario.jpg";
+import modellistica from "@assets/reggiani/home/Modellistica.jpg";
+import prototipia from "@assets/reggiani/home/Prototipia.jpg";
+import ricerca from "@assets/reggiani/home/Ricerca.jpg";
+import { Image } from "astro:assets";
+
 import { getLangFromUrl } from "@i18n/utils";
+import { cn } from "@utils/cn";
 const lang = getLangFromUrl(Astro.url);
 ---
 
@@ -14,7 +21,52 @@ const lang = getLangFromUrl(Astro.url);
   <Container>
     <Hero client:load lang={lang} />
 
-    <Research client:load lang={lang} />
+    <Research client:load lang={lang}>
+      <Image
+        slot="ricerca"
+        src={ricerca}
+        alt="Research."
+        width="1000"
+        height="1000"
+        class={cn(
+          "object-cover absolute inset-0 h-full w-full transition duration-200"
+          // loaded ? "blur-none" : "blur-md",
+        )}
+      />
+      <Image
+        slot="prototipia"
+        src={prototipia}
+        alt="Research."
+        width="1000"
+        height="1000"
+        class={cn(
+          "object-cover absolute inset-0 h-full w-full transition duration-200"
+          // loaded ? "blur-none" : "blur-md",
+        )}
+      />
+      <Image
+        slot="modellistica"
+        src={modellistica}
+        alt="Research."
+        width="1000"
+        height="1000"
+        class={cn(
+          "object-cover absolute inset-0 h-full w-full transition duration-200"
+          // loaded ? "blur-none" : "blur-md",
+        )}
+      />
+      <Image
+        slot="campionario"
+        src={campionario}
+        alt="Research."
+        width="1000"
+        height="1000"
+        class={cn(
+          "object-cover absolute inset-0 h-full w-full transition duration-200"
+          // loaded ? "blur-none" : "blur-md",
+        )}
+      />
+    </Research>
     <Logos />
   </Container>
 </Layout>

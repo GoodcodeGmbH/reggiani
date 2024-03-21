@@ -5,9 +5,47 @@ import ricerca from "@assets/reggiani/home/Ricerca.jpg";
 
 import { useTranslations } from "@i18n/utils";
 import { LayoutGrid, type Card } from "./ui/layout-grid";
+import { cn } from "@utils/cn";
 
-const Research = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
-  const t = useTranslations(lang);
+const Research = (props: {
+  lang: "en" | "it" | "de" | "fr";
+  [key: string]: any;
+}) => {
+  const cards = [
+    {
+      id: 1,
+      content: SkeletonOne,
+      title: "research.one.title",
+
+      className: "md:col-span-2 min-h-32 sm:min-h-64",
+      thumbnail: props.campionario,
+    },
+    {
+      id: 2,
+      content: SkeletonTwo,
+      title: "research.two.title",
+
+      className: "col-span-1 row-span-2 md:row-span-1",
+      thumbnail: props.prototipia,
+    },
+    {
+      id: 3,
+      content: SkeletonThree,
+      title: "research.three.title",
+
+      className: "col-span-1 row-span-2 md:row-span-1",
+      thumbnail: props.modellistica,
+    },
+    {
+      id: 4,
+      content: SkeletonFour,
+      title: "research.four.title",
+
+      className: "md:col-span-2 min-h-32",
+      thumbnail: props.ricerca,
+    },
+  ] as Card[];
+  const t = useTranslations(props.lang);
   return (
     <div className="pt-20 w-full">
       <div className="mx-auto max-w-2xl text-center">
@@ -21,7 +59,7 @@ const Research = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
           {t("research.description")}
         </p>
       </div>
-      <LayoutGrid cards={cards} lang={lang} />
+      <LayoutGrid cards={cards} lang={props.lang} />
     </div>
   );
 };
@@ -82,38 +120,3 @@ const SkeletonFour = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
     </div>
   );
 };
-
-const cards = [
-  {
-    id: 1,
-    content: SkeletonOne,
-    title: "research.one.title",
-
-    className: "md:col-span-2 min-h-32 sm:min-h-64",
-    thumbnail: campionario.src,
-  },
-  {
-    id: 2,
-    content: SkeletonTwo,
-    title: "research.two.title",
-
-    className: "col-span-1 row-span-2 md:row-span-1",
-    thumbnail: prototipia.src,
-  },
-  {
-    id: 3,
-    content: SkeletonThree,
-    title: "research.three.title",
-
-    className: "col-span-1 row-span-2 md:row-span-1",
-    thumbnail: modellistica.src,
-  },
-  {
-    id: 4,
-    content: SkeletonFour,
-    title: "research.four.title",
-
-    className: "md:col-span-2 min-h-32",
-    thumbnail: ricerca.src,
-  },
-] as Card[];

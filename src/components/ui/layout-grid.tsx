@@ -9,7 +9,7 @@ export type Card = {
   content: React.FC<{ lang: "en" | "it" | "de" | "fr" }>;
   title: keyof (typeof ui)[typeof defaultLang];
   className: string;
-  thumbnail: string;
+  thumbnail: JSX.Element;
 };
 
 export const LayoutGrid = ({
@@ -81,17 +81,19 @@ export const LayoutGrid = ({
 const BlurImage = ({ card }: { card: Card }) => {
   //   const [loaded, setLoaded] = useState(false);
   return (
-    <img
-      src={card.thumbnail}
-      height="500"
-      width="500"
-      //   onLoad={() => setLoaded(true)}
-      className={cn(
-        "object-cover absolute inset-0 h-full w-full transition duration-200",
-        // loaded ? "blur-none" : "blur-md",
-      )}
-      alt="thumbnail"
-    />
+    // <img
+    //   src={card.thumbnail}
+    //   height="500"
+    //   width="500"
+    //   //   onLoad={() => setLoaded(true)}
+    //   className={cn(
+    //     "object-cover absolute inset-0 h-full w-full transition duration-200",
+    //     // loaded ? "blur-none" : "blur-md",
+    //   )}
+    //   alt="thumbnail"
+    // />
+
+    card.thumbnail
   );
 };
 
