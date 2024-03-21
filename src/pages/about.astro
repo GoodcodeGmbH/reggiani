@@ -6,75 +6,67 @@ import { Image } from "astro:assets";
 import ChiSiamo from "@assets/reggiani/chi-siamo.jpg";
 import ChiSiamo2 from "@assets/reggiani/chi-siamo-2.jpg";
 
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 ---
 
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Chi siamo</Fragment>
+      <Fragment slot="title">{t("about.title")}</Fragment>
       <Fragment slot="desc"></Fragment>
     </Sectionhead>
 
     <!-- Image -->
 
-
-
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 space-y-12 px-4">
-
       <p class="text-lg leading-relaxed text-slate-500">
-        La nostra storia parte dal 1983, quando la STD Reggiani, acronimo che
-        significa Styling, Technology e Design, iniziò ad operare disegnando e
-        seguendo le produzioni di abbigliamento per grandi marchi
-        internazionali. Gianfranco Reggiani, il fondatore, si è sempre e da
-        subito distinto per le sue straordinarie doti non solo di imprenditore,
-        ma di designer e conoscitore del prodotto, collaborando con molti marchi
-        internazionali.
+        {t("about.top-fragment")}
       </p>
       <div class="flex justify-center">
-          <Image  class=" max-w-[720px] w-full h-auto" src={ChiSiamo} alt="Chi siamo" />
+        <Image
+          class="max-w-[720px] w-full h-auto"
+          src={ChiSiamo}
+          alt="Chi siamo"
+        />
       </div>
       <div class="space-y-3">
         <p class="text-lg leading-relaxed text-slate-500">
-          Siamo presenti in Cina dal 2004, inizialmente con una joint venture, e
-          in un secondo momento e da oramai quasi 19 anni una azienda situata in
-          Cina interamente sotto nostra cura, con possibilità completa di creare
-          uno spazio innovativo, capace di portare i nostri servizi e le nostre
-          tecnologie a livello internazionale, quindi:
+          {t("about.mid-fragment")}
         </p>
-        <div class="flex flex-col gap-4 lg:flex-row justify-between items-center">
-        <ol
-          class="list-decimal list-inside text-lg leading-relaxed text-slate-500 basis-1/2">
-          <li>
-            Scelta di operare in un’azienda 100% influenzabile dalle nostre idee
-          </li>
-          <li>
-            Formazione di tecnici e manager in loco esperti in:
-            <ol class="list-[upper-roman] list-inside ml-6">
-              <li>
-                <span class="font-bold">Standard qualitativi elevati</span>, con
-                introduzione del concetto del “total quality system” e del
-                design tecnico come lettura dei contenuti del prodotto.
-              </li>
-              <li>
-                Introduzione del <span class="font-bold"
-                  >controllo giornaliero dell’operatività</span
-                > di ogni settore: dall’input alla produzione, al controllo, il packing
-                e le consegne.
-              </li>
-            </ol>
-          </li>
-        </ol>
-        <div class="flex justify-center">
-            <Image  class=" max-w-[340px] w-full h-auto" src={ChiSiamo2} alt="Chi siamo" />
-        </div>
+        <div
+          class="flex flex-col gap-4 lg:flex-row justify-between items-center">
+          <ol
+            class="list-decimal list-inside text-lg leading-relaxed text-slate-500 basis-1/2">
+            <li>
+              {t("about.list-1")}
+            </li>
+            <li>
+              {t("about.list-2")}
+              <ol class="list-[upper-roman] list-inside ml-6">
+                <li set:html={t("about.list-3")} />
+                <li set:html={t("about.list-4")} />
+              </ol>
+            </li>
+          </ol>
+          <div class="flex justify-center">
+            <Image
+              class="max-w-[340px] w-full h-auto"
+              src={ChiSiamo2}
+              alt="Chi siamo"
+            />
+          </div>
         </div>
       </div>
       <p class="text-lg leading-relaxed text-slate-500">
-        La crescita globale avvenuta in numerosi anni di lavoro, ci ha permesso
-        di crescere globalmente, accumulando un bagaglio di conoscenze e
-        Know-How considerevole, in grado di risolvere problematiche e scegliere
-        strategici modi di operare internazionalmente dal design alla
-        produzione.
+        {t("about.bot-fragment")}
       </p>
 
       <!-- A video in a video tag -->

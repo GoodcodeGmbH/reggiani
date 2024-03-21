@@ -1,6 +1,11 @@
 {
-  "hero.title": "Styling - Technology - Design",
+  "nav.home": "Startseite",
+  "nav.about": "Über uns",
+  "nav.our-sites": "Unsere Standorte",
+  "nav.contact": "Kontakt",
+  "nav.language": "Sprache",
 
+  "hero.title": "Styling - Technology - Design",
   "hero.subtitle": "Hersteller von Kleidung für die besten internationalen Marken.",
   "hero.cta": "Kontaktiere uns",
 
@@ -20,18 +25,27 @@
   "research.four.title": "Forschung und Entwicklung",
   "research.four.content": " Unser Team widmet sich der Suche nach leistungsstarken und hochwertigen Stoffen und Accessoires, um einzigartige und innovative Kleidungsstücke zu entwickeln. Das Studium und die Erforschung neuer Materialien, seien es Fasern, Stoffe oder Zubehör, sind von grundlegender Bedeutung, um innovative, leistungsstarke und nachhaltige Vorschläge anbieten zu können, die dem Endverbraucher maximale Sicherheit bieten.",
 
+  "home.certifications.title": "Unsere Zertifizierungen",
+
+  "about.title": "Über uns",
+  "about.top-fragment": "Unsere Geschichte geht auf das Jahr 1983 zurück, als STD Reggiani, ein Akronym, das für Styling, Technologie und Design steht, damit begann, für große internationale Marken Bekleidung zu entwerfen und deren Produktion zu leiten. Der Gründer Gianfranco Reggiani hat sich immer und sofort durch seine außergewöhnlichen Fähigkeiten ausgezeichnet, nicht nur als Unternehmer, sondern auch als Designer und Produktkenner, der mit vielen internationalen Marken zusammenarbeitet.",
+  "about.mid-fragment": "Seit 2004 sind wir in China präsent, zunächst mit einem Joint Venture und später, seit nunmehr fast 19 Jahren, mit einem Unternehmen in China, das vollständig von uns geführt wird, um einen innovativen Raum zu schaffen, der in der Lage ist, unsere Dienstleistungen und Technologien auf ein internationales Niveau zu bringen, also:",
+  "about.bot-fragment": "Das globale Wachstum, das wir im Laufe der Jahre erfahren haben, hat es uns ermöglicht, weltweit zu wachsen und einen großen Wissensschatz und ein beträchtliches Know-how anzuhäufen, das uns in die Lage versetzt, Probleme zu lösen und strategische Wege zu wählen, um auf internationaler Ebene von der Planung bis zur Produktion tätig zu sein.",
+  "about.list-1": "Die Entscheidung, ein Unternehmen zu betreiben, das zu 100 % von unseren Ideen beeinflusst ist.",
+  "about.list-2": " Ausbildung von Technikern und Managern vor Ort mit Fachkenntnissen in:",
+  "about.list-3": "<span class='font-bold'>Hohe Qualitätsstandards</span>, mit der Einführung des Konzepts des „Total Quality System“ und des technischen Designs als Lesart des Produktinhalts",
+  "about.list-4": "Einführung einer <span class='font-bold'>täglichen Überwachung der Arbeitsabläufe</span> in jedem Bereich: von der Eingabe bis zur Produktion, Kontrolle, Verpackung und Lieferung.",
+
   "sites.title": "Unsere Standorte",
   "sites.description": "Seit der Gründung unseres Unternehmens sind wir stark gewachsen und unser Team von qualifizierten Fachleuten erstreckt sich von der Schweiz, mit zwei verschiedenen Standorten, bis nach Hongkong.",
 
-  "nav.home": "Startseite",
-  "nav.about": "Über uns",
-  "nav.our-sites": "Unsere Standorte",
-  "nav.contact": "Kontakt",
-  "nav.language": "Sprache",
-
-  "home.certifications.title": "Unsere Zertifizierungen",
-
   "contact.title": "Kontakt",
   "contact.description": "Wir sind für Sie da.",
-  "contact.text": "Kontaktieren Sie uns für weitere Informationen, wir freuen uns, Ihnen zu antworten."
+  "contact.text": "Kontaktieren Sie uns für weitere Informationen, wir freuen uns, Ihnen zu antworten.",
+
+  "contact.subtitle": "Kontaktiere Reggiani <span class='font-bold text-reggianiRed'>S.T.D.</span>",
+  "contact.send": "Nachricht senden",
+  "contact.fullName": "Name und Nachname",
+  "contact.emailAddress": "E-Mail-Adresse",
+  "contact.yourMessage": "Deine Nachricht"
 }

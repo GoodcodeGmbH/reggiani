@@ -1,4 +1,10 @@
 {
+  "nav.home": "Home",
+  "nav.about": "Chi siamo",
+  "nav.our-sites": "Le nostre sedi",
+  "nav.contact": "Contatti",
+  "nav.language": "Lingua",
+
   "hero.title": "Styling - Technology - Design",
   "hero.subtitle": "I produttori di abbigliamento dei migliori marchi internazionali.",
   "hero.cta": "Contattaci",
@@ -19,18 +25,26 @@
   "research.four.title": "Ricerca e Sviluppo",
   "research.four.content": " Un team dedicato alla ricerca di tessuti e accessori performanti e di alta qualità per sviluppare capi sempre unici e all’avanguardia. Lo studio e la ricerca di nuovi materiali, siano essi fibre, tessuti o accessoristica; sono fondamentali per offrire proposte all’avanguardia, performanti, sostenibili e che diano la massima sicurezza agli utilizzatori finali.",
 
-  "nav.home": "Home",
-  "nav.about": "Chi siamo",
-  "nav.our-sites": "Le nostre sedi",
-  "nav.contact": "Contatti",
-  "nav.language": "Lingua",
-
   "home.certifications.title": "Le nostre certificazioni",
+
+  "about.title": "Chi siamo",
+  "about.top-fragment": "La nostra storia parte dal 1983, quando la STD Reggiani, acronimo che significa Styling, Technology e Design, iniziò ad operare disegnando e seguendo le produzioni di abbigliamento per grandi marchi internazionali. Gianfranco Reggiani, il fondatore, si è sempre e da subito distinto per le sue straordinarie doti non solo di imprenditore, ma di designer e conoscitore del prodotto, collaborando con molti marchi internazionali.",
+  "about.mid-fragment": "Siamo presenti in Cina dal 2004, inizialmente con una joint venture, e in un secondo momento e da oramai quasi 19 anni una azienda situata in Cina interamente sotto nostra cura, con possibilità completa di creare uno spazio innovativo, capace di portare i nostri servizi e le nostre tecnologie a livello internazionale, quindi:",
+  "about.bot-fragment": "La crescita globale avvenuta in numerosi anni di lavoro, ci ha permess di crescere globalmente, accumulando un bagaglio di conoscenze e Know-How considerevole, in grado di risolvere problematiche e scegliere strategici modi di operare internazionalmente dal design alla produzione.",
+  "about.list-1": "Scelta di operare in un’azienda 100% influenzabile dalle nostre idee",
+  "about.list-2": "Formazione di tecnici e manager in loco esperti in:",
+  "about.list-3": "<span class='font-bold'>Standard qualitativi elevati</span>, con introduzione del concetto del “total quality system” e del design tecnico come lettura dei contenuti del prodotto.",
+  "about.list-4": "Introduzione del <span class='font-bold'> controllo giornaliero dell’operatività</span> di ogni settore: dall’input alla produzione, al controllo, il packing e le consegne.",
 
   "sites.title": "Le nostre sedi",
   "sites.description": "Dal momento della fondazione del nostro Business ad oggi, siamo cresciuti notevolmente, ed il nostro team di professionisti qualificati si estende dalla Svizzera, in due diverse sedi, fino a Hong Kong.",
 
   "contact.title": "Contatti",
   "contact.description": "Siamo qui per voi.",
-  "contact.text": "Contattateci per qualsiasi informazione, saremo lieti di rispondervi."
+  "contact.subtitle": "Contatta Reggiani <span class='font-bold text-reggianiRed'>S.T.D.</span>",
+  "contact.text": "Contattateci per qualsiasi informazione, saremo lieti di rispondervi.",
+  "contact.send": "Invia messaggio",
+  "contact.fullName": "Nome e Cognome",
+  "contact.emailAddress": "Indirizzo Email",
+  "contact.yourMessage": "Il tuo messaggio"
 }
