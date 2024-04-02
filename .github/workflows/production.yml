@@ -44,7 +44,9 @@ jobs:
           server: www.reggianistd.com
           username: reggianistd
           password: xu(e4Uv7i
-
+          server-dir: /www/reggianistd.com/
+          local-dir: ./dist/
+          log-level: verbose
   # deploy:
   #   needs: build
   #   runs-on: ubuntu-latest
