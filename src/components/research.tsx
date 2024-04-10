@@ -7,10 +7,7 @@ import { useTranslations } from "@i18n/utils";
 import { LayoutGrid, type Card } from "./ui/layout-grid";
 import { cn } from "@utils/cn";
 
-const Research = (props: {
-  lang: "en" | "it" | "de" | "fr";
-  [key: string]: any;
-}) => {
+const Research = (props: { lang: "en" | "it" | "de"; [key: string]: any }) => {
   const cards = [
     {
       id: 1,
@@ -66,7 +63,7 @@ const Research = (props: {
 
 export default Research;
 
-const SkeletonOne = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
+const SkeletonOne = ({ lang }: { lang: "en" | "it" | "de" }) => {
   const t = useTranslations(lang);
   console.log(t("research.one.title"));
   return (
@@ -80,7 +77,7 @@ const SkeletonOne = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
   );
 };
 
-const SkeletonTwo = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
+const SkeletonTwo = ({ lang }: { lang: "en" | "it" | "de" }) => {
   const t = useTranslations(lang);
   return (
     <div>
@@ -92,7 +89,7 @@ const SkeletonTwo = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
     </div>
   );
 };
-const SkeletonThree = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
+const SkeletonThree = ({ lang }: { lang: "en" | "it" | "de" }) => {
   const t = useTranslations(lang);
   return (
     <div>
@@ -106,7 +103,7 @@ const SkeletonThree = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
     </div>
   );
 };
-const SkeletonFour = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
+const SkeletonFour = ({ lang }: { lang: "en" | "it" | "de" }) => {
   const t = useTranslations(lang);
   return (
     <div>

@@ -33,11 +33,6 @@ jobs:
         working-directory: "."
         run: npm run build
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "./dist/"
-
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -47,13 +42,3 @@ jobs:
           server-dir: /www.reggianistd.com/
           local-dir: ./dist/
           log-level: verbose
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4

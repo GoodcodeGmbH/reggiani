@@ -5,11 +5,10 @@ import sitemap from "@astrojs/sitemap";
 
 import react from "@astrojs/react";
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://goodcodegmbh.github.io",
-  base: "/reggiani",
-  trailingSlash: "ignore",
+  site: "https://www.reggianistd.com",
+  base: "/",
+  trailingSlash: "never",
 
   output: "static",
 

@@ -6,7 +6,7 @@ import { ui, defaultLang } from "@i18n/ui";
 
 export type Card = {
   id: number;
-  content: React.FC<{ lang: "en" | "it" | "de" | "fr" }>;
+  content: React.FC<{ lang: "en" | "it" | "de" }>;
   title: keyof (typeof ui)[typeof defaultLang];
   className: string;
   thumbnail: JSX.Element;
@@ -17,7 +17,7 @@ export const LayoutGrid = ({
   lang,
 }: {
   cards: Card[];
-  lang: "en" | "it" | "de" | "fr";
+  lang: "en" | "it" | "de";
 }) => {
   const [selected, setSelected] = useState<Card | null>(null);
   const [lastSelected, setLastSelected] = useState<Card | null>(null);
@@ -102,7 +102,7 @@ const SelectedCard = ({
   lang,
 }: {
   selected: Card | null;
-  lang: "en" | "it" | "de" | "fr";
+  lang: "en" | "it" | "de";
 }) => {
   const t = useTranslations(lang);
   return (

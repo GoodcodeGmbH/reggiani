@@ -30,7 +30,7 @@ export function useTranslations(lang: keyof typeof ui) {
 export function useTranslatedPath(lang: keyof typeof ui) {
   return function translatePath(path: string, l: string = lang) {
     // Including the base URL in the path
-    const basePath = "/reggiani";
+    const basePath = "https://www.reggianistd.com/";
     if (!showDefaultLang && l === defaultLang) {
       return `${basePath}${path}`;
     } else {

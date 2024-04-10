@@ -20,7 +20,7 @@ function wrapCaps(text) {
   return elements;
 }
 
-const Hero = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
+const Hero = ({ lang }: { lang: "en" | "it" | "de" }) => {
   const translatePath = useTranslatedPath(lang);
   const t = useTranslations(lang);
   return (
@@ -32,7 +32,10 @@ const Hero = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover object-center z-0">
-        <source src={url + "/video/home.mp4"} type="video/mp4" />
+        <source
+          src={"https://www.reggianistd.com" + "/video/home.mp4"}
+          type="video/mp4"
+        />
       </video>
       <motion.div
         initial={{
@@ -54,7 +57,9 @@ const Hero = ({ lang }: { lang: "en" | "it" | "de" | "fr" }) => {
         <motion.p className="text-center text-xl font-normal text-neutral-200">
           {t("hero.subtitle")}
         </motion.p>
-        <button className="px-4 py-2 backdrop-blur-sm border bg-reggianiRed/10 border-reggianiRed/20 text-white mx-auto text-center  relative mt-8">
+        <button
+          className="px-4 py-2 backdrop-blur-sm border bg-reggianiRed/10 border-reggianiRed/20 text-white mx-auto text-center  relative mt-8"
+          onClick={() => window.open(translatePath("/contact"))}>
           <span>{t("hero.cta")} →</span>
           <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-reggianiRed to-transparent" />
         </button>
