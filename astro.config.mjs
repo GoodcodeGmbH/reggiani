@@ -6,9 +6,9 @@ import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  site: "https://www.reggianistd.com",
+  site: "https://localhost:3000",
   base: "/",
-  trailingSlash: "never",
+  trailingSlash: "ignore",
 
   output: "static",
 

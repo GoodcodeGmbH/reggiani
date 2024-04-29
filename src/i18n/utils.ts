@@ -9,7 +9,7 @@ export function getLangFromUrl(url: URL) {
   // Assuming your URLs are of the form /reggiani/en/some-path
   const parts = url.pathname.split("/");
   // Adjusting the index to account for the base URL segment
-  const lang = parts[2]; // Lang is now the third part due to /reggiani being the first
+  const lang = parts[1]; // Lang is now the third part due to /reggiani being the first
 
   if (lang && ui[lang]) return lang as keyof typeof ui;
   return defaultLang;

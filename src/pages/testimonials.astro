@@ -1,0 +1,86 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Image } from "astro:assets";
+import ChiSiamo from "@assets/reggiani/chi-siamo.jpg";
+import ChiSiamo2 from "@assets/reggiani/chi-siamo-2.jpg";
+import SRV_L1 from "@assets/testimonials/SRV_L1.png";
+import SRV_R1 from "@assets/testimonials/SRV_R1.png";
+import T_Business from "@assets/testimonials/T_Business.png";
+
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "@i18n/utils";
+import Link from "@components/ui/link.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
+---
+
+<Layout title="Dicono di noi">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">{t("testimonials.title")}</Fragment>
+      <Fragment slot="desc">{t("testimonials.desc")}</Fragment>
+    </Sectionhead>
+
+    <!-- Image -->
+
+    <div class="space-y-8">
+      <div
+        class="flex flex-col items-center gap-24 mx-auto max-w-4xl mt-16 px-4">
+        <div class="flex justify-center flex-col gap-3 items-center font-serif">
+          <h3 class="text-2xl font-bold font-serif">
+            {t("testimonials.articles")}
+          </h3>
+          <div class="flex justify-center">
+            <Image
+              class="max-w-[720px] w-1/2 h-auto cursor-pointer"
+              src={SRV_R1}
+              alt="SVR R1"
+              onclick={`window.open('${SRV_R1.src}', '_blank')`}
+            />
+            <Image
+              class="max-w-[720px] w-1/2 h-auto cursor-pointer"
+              src={SRV_L1}
+              alt="SVR L1"
+              onclick={`window.open('${SRV_L1.src}', '_blank')`}
+            />
+          </div>
+          <div class="flex justify-center">
+            <Image
+              class="max-w-[720px] w-1/2 h-auto cursor-pointer"
+              src={T_Business}
+              alt="T Business"
+              onclick={`window.open('${T_Business.src}', '_blank')`}
+            />
+          </div>
+        </div>
+
+        <!--  a link to an article -->
+        <div class="flex justify-center flex-col gap-3 items-center font-serif">
+          <h3 class="text-2xl font-bold">{t("testimonials.more")}</h3>
+          <Link
+            href="https://www.teleticino.ch/gulliver/gulliver-still-very-reggiani-3725"
+            target="_blank"
+            style="inverted"
+            size="md">
+            Gulliver - Still Very Reggiani
+          </Link>
+          <Link
+            href="https://www.ticinonews.ch/infoaziende/innovazione-scelte-materiali-nuovi-per-la-moda-sostenibile-382992"
+            target="_blank"
+            style="inverted"
+            size="md">
+            Ticino News - Innovazione: scelte materiali nuovi per la moda
+            sostenibile
+          </Link>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

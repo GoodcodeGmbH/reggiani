@@ -14,7 +14,6 @@ export const showDefaultLang = false;
 export const ui = {
   it: it,
   de: de,
-
   en: en,
 } as const;
 

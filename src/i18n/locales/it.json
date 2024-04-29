@@ -4,6 +4,7 @@
   "nav.our-sites": "Le nostre sedi",
   "nav.contact": "Contatti",
   "nav.language": "Lingua",
+  "nav.testimonials": "Dicono di noi",
 
   "hero.title": "Styling - Technology - Design",
   "hero.subtitle": "I produttori di abbigliamento dei migliori marchi internazionali.",
@@ -46,5 +47,10 @@
   "contact.send": "Invia messaggio",
   "contact.fullName": "Nome e Cognome",
   "contact.emailAddress": "Indirizzo Email",
-  "contact.yourMessage": "Il tuo messaggio"
+  "contact.yourMessage": "Il tuo messaggio",
+
+  "testimonials.title": "Dicono di noi",
+  "testimonials.desc": "Scopri cosa i media dicono di noi! In questa pagina troverai una raccolta di articoli, interviste e recensioni che riflettono l'impatto e la risonanza del nostro lavoro nel mondo. Dai un'occhiata ai link sottostanti per esplorare le varie coperture giornalistiche che abbiamo ricevuto.",
+  "testimonials.articles": "Cosa dicono di noi i giornali",
+  "testimonials.more": "Scopri i vari articoli che parlano di noi"
 }
