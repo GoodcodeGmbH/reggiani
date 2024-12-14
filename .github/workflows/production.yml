@@ -38,7 +38,7 @@ jobs:
         with:
           server: www.reggianistd.com
           username: reggianistd
-          password: xu(e4Uv7i
+          password: ze2da$Ng
           server-dir: /www.reggianistd.com/
           local-dir: ./dist/
           log-level: verbose
